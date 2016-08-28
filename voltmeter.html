@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>电压表测试实验</title>
+		<style>
+			*{margin:0 auto;}
+		</style>
+		<script src="./virtual_igl.js"></script>
+	</head>
+		
+	<body>
+		<div style="width:500px;height:500px;margin-top:60px;">
+			<canvas id="voltmeter" width="500px" height="500px">你的浏览器不支持canvas。</canvas>
+		</div>
+		
+		<script>
+			var a = parseInt(Math.random()*20); 
+			var canvas  = document.getElementById('voltmeter').getContext("2d");
+			function test(){
+				var b = parseInt(Math.random()*20);
+				draw_voltmeter(canvas,0,0,500,500,20,a,b,'v');
+				a = b;
+			}
+			test();
+			setInterval("test()",1500);
+		</script>
+	</body>
+</html>

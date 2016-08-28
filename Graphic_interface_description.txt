@@ -1,0 +1,84 @@
+﻿各个函数功能和参数说明
+draw_dashboard(canvas,x,y,width,height,range)
+	功能：画仪表盘。
+	canvas：为可操控的canvas画布
+	x:仪表盘起始x轴坐标
+	y:仪表盘起始y轴坐标
+	width:仪表盘的宽度
+	height:仪表盘的高度
+	range:仪表盘的量程
+		
+draw_colorRect(canvas,x,y,width,height)
+	功能：画各种颜色的矩形。
+	color：将要画的矩形的颜色，包括blue、black、purple、red、green、yellow、white、brown、pink、grey，十种颜色可供选择。
+	canvas：为可操控的canvas画布
+	x:矩形起始x轴坐标
+	y:矩形起始y轴坐标
+	width:矩形的宽度
+	height:矩形的高度
+		
+draw_colorGraduation(canvas,x,y,r,start,end)
+	功能：画各种颜色的刻度线。
+	color：将要画的刻度线的颜色，包括blue、black、purple、red、green、yellow、white、brown、pink、grey，十种颜色可供选择。
+	canvas：为可操控的canvas画布
+	x:刻度线中心x轴的坐标
+	y:刻度线中心y轴的坐标
+	r:刻度线的半径
+	start:刻度线开始的弧度（在此定义：直角坐标系x轴的负半轴为0弧度，y轴的正半轴为Math.PI/2弧度，x轴的正半轴为3*Math.PI/4，y轴的负半轴为2*Math.PI弧度，方向：顺时针）
+	end:刻度线结束的弧度
+	
+draw_colorCircular(canvas,x,y,r,start,end)
+	功能：画各种颜色的圆。
+	color：将要画的圆的颜色，包括blue、black、purple、red、green、yellow、white、brown、pink、grey，十种颜色可供选择。
+	canvas：为可操控的canvas画布	
+	x:圆心x轴的坐标
+	y:圆心y轴的坐标
+	r:圆的半径
+	start:圆开始的弧度（在此定义：直角坐标系x轴的负半轴为0弧度，y轴的正半轴为Math.PI/2弧度，x轴的正半轴为3*Math.PI/4，y轴的负半轴为2*Math.PI弧度，方向：顺时针）
+	end:圆结束的弧度
+	
+draw_colorpoint(canvas,x,y,length,start,end)
+	功能：画各种颜色的指针。
+	color：将要画的指针的颜色，包括blue、black、purple、red、green、yellow、white、brown、pink、grey，十种颜色可供选择。
+	canvas：为可操控的canvas画布
+	x:指针旋转的中心x轴坐标
+	y:指针旋转的中心y轴坐标
+	length：指针的长度
+	start:指针开始旋转的弧度（在此定义：直角坐标系x轴的负半轴为0弧度，y轴的正半轴为Math.PI/2弧度，x轴的正半轴为3*Math.PI/4，y轴的负半轴为2*Math.PI弧度，方向：顺时针）
+	end:指针旋转结束的弧度
+	
+draw_voltmeter(canvas,x,y,width,height,range,start,end,type)
+	功能：画电压表、电流表、电阻表的函数。
+	canvas：为可操控的canvas画布
+	x:各表左上角顶点x轴坐标
+	y:各表左上角顶点y轴坐标
+	width:各表的宽度
+	height：各表的高度
+	range：各表的量程
+	start：各表指针开始时指向的值
+	end：各表指针结束时指向的值
+	type：指名是电压表、电流表、还是电阻表，各表对应的常量为  'v'  'a'  'r'  。
+	
+draw_pressure_gauge(canvas,x,y,r,range,start,end)
+	功能：画压力表的函数
+	canvas：为可操控的canvas画布
+	x：压力表中心x轴坐标
+	y：压力表中心y轴坐标
+	r：压力表的半径
+	range：压力表的量程
+	start：压力表指针开始时指向的值
+	end：压力表指针结束时指向的值
+	
+draw_canvasclock(canvas,width,height)
+	功能：画canvas时钟
+	canvas：为可操控的canvas画布
+	width：时钟的宽度
+	height：时钟的高度
+	
+draw_thermograph(canvas,width,height,start,end)
+	功能：画温度计的函数
+	canvas：为可操控的canvas画布
+	width：温度计的宽度
+	height：温度计的高度
+	start：温度计开始的值
+	end：温度计结束的值

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>压力表测试实验</title>
+		<style>
+			*{margin:0 auto;}
+		</style>
+		<script src="./virtual_igl.js"></script>
+	</head>
+		
+	<body>
+		<div style="width:505px;height:505px;margin-top:60px;">
+			<canvas id="pressure_gauge" width="505px" height="505px">你的浏览器不支持canvas。</canvas>
+		</div>
+		
+		<script>
+			var a = parseInt(Math.random()*40); 
+			var canvas  = document.getElementById('pressure_gauge').getContext("2d");
+			function test(){
+				var b = parseInt(Math.random()*40);
+				draw_pressure_gauge(canvas,250,250,250,100,a,b);
+				a = b;
+			}
+			test();
+			setInterval("test()",1500);
+		</script>
+	</body>
+</html>
